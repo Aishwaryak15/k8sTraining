@@ -1,0 +1,18 @@
+kind: ReplicationSet
+apiVersion: apps/v1
+metadata:
+  name: myreplica
+spec:
+  replicas: 2
+  selector:
+    myname: Aishwarya
+  template:
+    metadata:
+      name: testpods
+      labels:
+        myname: Aishwarya
+    spec:
+      containers:
+      - name: c00
+        image: ubuntu
+        command: ["/bin/bash", "-c", "while true; do echo Hello-aish; sleep 5 ; done"]

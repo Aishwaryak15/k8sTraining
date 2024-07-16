@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nodelabels
+  labels:
+    env: development
+    class: pods
+spec:
+  containers:
+    - name: demoContainer
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hi-there; sleep 5 ; done"]
+  nodeSelector:
+      hardware: t2.medium
