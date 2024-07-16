@@ -1,14 +1,15 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: nodelabels
+  name: nodeselectorpod
   labels:
     env: development
     class: pods
 spec:
   containers:
-    - name: demoContainer
-      image: ubuntu
-      command: ["/bin/bash", "-c", "while true; do echo Hi-there; sleep 5 ; done"]
+  - name: container-nodeselector
+    image: nginx:latest
+    ports:
+    - containerPort: 80
   nodeSelector:
-      hardware: t2.medium
+      city: mumbai

@@ -13,6 +13,6 @@ spec:
         myname: Aishwarya
     spec:
       containers:
-      - name: c00
+      - name: replicationcontroller-cont
         image: ubuntu
         command: ["/bin/bash", "-c", "while true; do echo Hello-aish; sleep 5 ; done"]

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod2
-  namespace: default
+  namespace: aish
   labels: 
     env: development
 spec:

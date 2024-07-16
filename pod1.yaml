@@ -5,7 +5,7 @@ metadata:
   namespace: aish
 spec:
   containers:
-  - name: mycontainer
+  - name: mycontainer1
     image: nginx:latest
     ports:
     - containerPort: 80

@@ -2,12 +2,13 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: pod3
+  namespace: aish
   labels:
     env: development
     city: pune
 spec:
   containers:
-  - name: mycontainer
+  - name: mycontainer3
     image: nginx:latest
     ports:
     - containerPort: 80
