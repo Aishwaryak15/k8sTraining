@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod3
+  labels:
+    env: development
+    city: pune
+spec:
+  containers:
+  - name: mycontainer
+    image: nginx:latest
+    ports:
+    - containerPort: 80

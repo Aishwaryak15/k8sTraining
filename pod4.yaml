@@ -1,8 +1,10 @@
-apiVersion: v1
 kind: Pod
+apiVersion: v1
 metadata:
-  name: mypod
-  namespace: default
+  name: pod4
+  labels:
+    env: prod
+    city: mumbai
 spec:
   containers:
   - name: mycontainer
