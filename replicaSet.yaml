@@ -2,6 +2,7 @@ kind: ReplicaSet
 apiVersion: apps/v1
 metadata:
   name: myreplicaset
+  namespace: aishns
 spec:
   replicas: 2
   selector:
@@ -15,6 +16,6 @@ spec:
         myname: Aishwarya
     spec:
       containers:
-      - name: c00
+      - name: replicaset-cont6
         image: ubuntu
         command: ["/bin/bash", "-c", "while true; do echo Hello-aish; sleep 5 ; done"]

@@ -2,12 +2,13 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: nodeselectorpod
+  namespace: aishns
   labels:
     env: development
     class: pods
 spec:
   containers:
-  - name: container-nodeselector
+  - name: container-nodeselector5
     image: nginx:latest
     ports:
     - containerPort: 80

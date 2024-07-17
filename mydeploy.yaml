@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: aishdeploymentObj
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: deployment
+  template:
+    metadata:
+      name: testpod
+      labels:
+        name: deployment
+    spec:
+      containers:
+        - name: aishdeploymentcontainer7
+          image: ubuntu
+          command: ["/bin/bash", "-c", "while true; do echo Hey-there; sleep 5; done"]
