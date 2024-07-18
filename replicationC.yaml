@@ -1,7 +1,7 @@
 kind: ReplicationController
 apiVersion: v1
 metadata:
-  name: myreplica
+  name: aish-rc
   namespace: aishns
 spec:
   replicas: 2
@@ -14,6 +14,6 @@ spec:
         myname: Aishwarya
     spec:
       containers:
-      - name: replicationcontroller-cont6
+      - name: rc-cont6
         image: ubuntu
         command: ["/bin/bash", "-c", "while true; do echo Hello-aish; sleep 5 ; done"]

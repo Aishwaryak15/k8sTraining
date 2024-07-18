@@ -13,4 +13,4 @@ spec:
     ports:
     - containerPort: 80
   nodeSelector:
-      city: mumbai
+      hardware: t2.micro
