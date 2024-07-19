@@ -1,31 +1,18 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
-  name: nodeaffinitypod
-  namespace: aishns
-  labels:
-    env: development
-    class: pods
+  name: aish-nodeaffinitypod
 spec:
-  affinity:
-    nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: hardware
-            operator: In
-            values:
-            - t2.micro
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        preference:
-          matchExpressions:
-          - key: hardware
-            operator: In
-            values:
-            - t3.micro
   containers:
   - name: container-nodeselector5
     image: nginx:latest
     ports:
     - containerPort: 80
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator: Exists
+

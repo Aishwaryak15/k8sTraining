@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp-pod
+  name: tolerant-pod
 spec:
   containers:
   - name: nginx
