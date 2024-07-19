@@ -7,7 +7,7 @@ spec:
   - name: nginx
     image: nginx:latest
   tolerations:
-  - key: "dedicated"
+  - key: "key"
     operator: "Equal"
     value: "experimental"
     effect: "NoSchedule"

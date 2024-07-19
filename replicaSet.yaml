@@ -13,8 +13,8 @@ spec:
     metadata:
       name: testpods
       labels:
-        city: inpune
-        myName: notinAishwarya 
+        city: pune
+        myName: notAishwarya 
     spec:
       containers:
       - name: replicaset-cont6
