@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netpod
+spec:
+  containers:
+  - name: netcont1
+    image: ubuntu
+    command: ["/bin/bash", "-c", "while true; do echo Hello-aish; sleep 5 ; done"]
+  - name: netcont2
+    image: httpd
+    ports:
+    - containerPort: 80 
+
